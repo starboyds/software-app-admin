@@ -1,0 +1,18 @@
+<%- include('./partials/header') %>
+
+<div class="container">
+    <div class="row mt-2">
+            <a href="/product/new">Create a new Product</a>
+            <h2>Sotware Products</h2>
+            <% for(let i=0; i<products.length; i++) { %>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h3><%= products[i].name %></h3>
+                        <span>Version: <%= products[i].version %></span>
+                    </div>
+                </div>
+            </div>
+            <% } %>
+    </div>
+</div>

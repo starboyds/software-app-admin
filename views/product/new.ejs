@@ -1,0 +1,60 @@
+<%- include('../partials/header') %>
+
+<div class="container">
+    <div class="row mt-3">
+        <div class="col-md-6 offset-md-3">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-text">Add a Product</h2>
+                    <hr>
+                    <form action="/product/create" method="post">
+                        <div class="mb-3">
+                            <label class="form-label" for="name">Name: </label>
+                            <input class="form-control" type="text" name="name" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="desc">Description: </label>
+                            <textarea class="form-control" type="text" name="desc"></textarea>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <label class="form-label" for="size">Size: </label>
+                                <input class="form-control" type="number" name="size" />
+                            </div>
+                            <div class="col">
+                                <label class="form-label" for="name">Version: </label>
+                                <input class="form-control" type="text" name="version" />
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <label class="form-label" for="rating">Rating: </label>
+                                <input class="form-control" type="number" name="rating" />
+                            </div>
+                            <div class="col">
+                                <label class="form-label" for="language">Language: </label>
+                                <input class="form-control" type="text" name="language" />
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col">
+                                <label class="form-label" for="license">License: </label>
+                                <input class="form-control" type="text" name="license" />
+                            </div>
+                            <div class="col">
+                                <label class="form-label" for="tags">Tags(Separated by Commas): </label>
+                                <input class="form-control" type="text" name="tags" />
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="requirements">Requirements: </label>
+                            <input class="form-control" type="text" name="requirements" />
+                        </div>
+                        
+                        <button class="btn btn-dark mt-2">Add</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
