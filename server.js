@@ -49,6 +49,34 @@ app.get('/products/:id', async(req, res) => {
     res.render('product/singleProduct', {product: product});
 })
 
+app.get('/products/:id/edit', async(req, res) => {
+  const product = await Product.findById(req.params.id);
+  res.render('product/edit', {product: product})
+})
+
+app.post('/product/:id/edit', async(req, res) => {
+
+  const { name, desc, tags, price, image_url, size, version, rating, requirements, language, license } = req.body;
+
+  const productFound = await Product.findById(req.params.id);
+  
+  productFound.name = name;
+  productFound.desc = desc;
+  productFound.tags = tags;
+  productFound.price = price;
+  productFound.image_url = image_url;
+  productFound.size = size;
+  productFound.version = version;
+  productFound.rating = rating;
+  productFound.requirements = requirements;
+  productFound.language = language;
+  productFound.license = license;
+
+  await productFound.save();
+
+  res.redirect('/');
+})
+
 // *********************** Listening to port ******************************
 app.listen(4000, () => {
     console.log('server is running on PORT 4000')

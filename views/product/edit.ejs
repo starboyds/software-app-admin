@@ -5,63 +5,63 @@
         <div class="col-md-6 offset-md-3">
             <div class="card">
                 <div class="card-body">
-                    <h2 class="card-text">Add a Product</h2>
+                    <h2 class="card-text">Edit a Product</h2>
                     <hr>
-                    <form action="/product/create" method="post">
+                    <form action="/product/<%= product.id %>/edit" method="post">
                         <div class="row mb-3">
                             <div class="col">
                                 <label class="form-label" for="name">Name: </label>
-                                <input class="form-control" type="text" name="name" />
+                                <input class="form-control" type="text" name="name" value="<%= product.name %>" />
                             </div>
                             <div class="col">
                                 <label class="form-label" for="price">Price: </label>
-                                <input class="form-control" type="number" name="price" />
+                                <input class="form-control" type="number" name="price" value="<%= product.price %>" />
                             </div>
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="desc">Description: </label>
-                            <textarea class="form-control" type="text" name="desc"></textarea>
+                            <textarea class="form-control" type="text" name="desc"><%= product.desc %></textarea>
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="image_url">Image Url: </label>
-                            <input class="form-control" type="text" name="image_url" />
+                            <textarea class="form-control" type="text" name="image_url"><%= product.image_url %></textarea>
                         </div>
                         <div class="row mb-3">
                             <div class="col">
                                 <label class="form-label" for="size">Size: </label>
-                                <input class="form-control" type="number" name="size" />
+                                <input class="form-control" type="number" name="size" value="<%= product.size %>" />
                             </div>
                             <div class="col">
                                 <label class="form-label" for="name">Version: </label>
-                                <input class="form-control" type="text" name="version" />
+                                <input class="form-control" type="text" name="version" value="<%= product.version %>" />
                             </div>
                         </div>
                         <div class="row mb-3">
                             <div class="col">
                                 <label class="form-label" for="rating">Rating: </label>
-                                <input class="form-control" type="number" name="rating" />
+                                <input class="form-control" type="number" name="rating" value="<%= product.rating %>" />
                             </div>
                             <div class="col">
                                 <label class="form-label" for="language">Language: </label>
-                                <input class="form-control" type="text" name="language" />
+                                <input class="form-control" type="text" name="language" value="<%= product.language %>" />
                             </div>
                         </div>
                         <div class="row mb-3">
                             <div class="col">
                                 <label class="form-label" for="license">License: </label>
-                                <input class="form-control" type="text" name="license" />
+                                <input class="form-control" type="text" name="license" value="<%= product.license %>" />
                             </div>
                             <div class="col">
                                 <label class="form-label" for="tags">Tags(Separated by Commas): </label>
-                                <input class="form-control" type="text" name="tags" />
+                                <input class="form-control" type="text" name="tags" value="<%= product.tags %>" />
                             </div>
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="requirements">Requirements: </label>
-                            <input class="form-control" type="text" name="requirements" />
+                            <input class="form-control" type="text" name="requirements" value="<%= product.requirements %>" />
                         </div>
                         
-                        <button class="btn btn-dark mt-2">Add</button>
+                        <button class="btn btn-dark mt-2">Edit</button>
                     </form>
                 </div>
             </div>

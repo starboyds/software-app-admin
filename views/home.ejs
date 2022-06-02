@@ -10,6 +10,8 @@
                     <div class="card-body">
                         <h3><%= products[i].name %></h3>
                         <span>Version: <%= products[i].version %></span>
+                        <a href="/products/<%=products[i].id %>">Show</a>
+                        <a href="/products/<%=products[i].id %>/edit">Edit</a>
                     </div>
                 </div>
             </div>
